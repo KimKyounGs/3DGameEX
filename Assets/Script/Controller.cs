@@ -16,12 +16,14 @@ public class Controller : MonoBehaviour
     public float playerSpeed; // 플레이어 이동 속도
     public Vector3 movement; // 플레이어 이동 방향
 
-    
+    Animator anim ;
 
     void Start()
     {
         wheel = -5;
         mouseY = 3;
+
+        anim = player.GetComponent<Animator>();
     }
 
     void CamMove()
@@ -61,11 +63,24 @@ public class Controller : MonoBehaviour
 
         if(movement != Vector3.zero)
         {
-            playerAxis.rotation = Quaternion.Euler(new Vector3(0,camAxis_Central.rotation.y+mouseX,0)*camSpeed); // 플레이어 회전
+            // 플레이어 회전
+            playerAxis.rotation = Quaternion.Euler(new Vector3(0,camAxis_Central.rotation.y+mouseX,0)*camSpeed); 
             playerAxis.Translate(movement * playerSpeed * Time.deltaTime); // 플레이어 이동
-            //점심먹고 시작작
+            
+            player.localRotation = Quaternion.Slerp(player.localRotation,Quaternion.LookRotation(movement),5*Time.deltaTime); // 플레이어 회전
+            
+            //애니메이션션
+            anim.SetBool("Walk",true);
+
 
         }
+
+        if(movement == Vector3.zero)
+        {
+            anim.SetBool("Walk",false);
+        }
+
+        camAxis_Central.position = new Vector3(player.position.x,player.position.y+3,player.position.z); // 카메라 위치
 
 
     }
@@ -75,6 +90,6 @@ public class Controller : MonoBehaviour
     {
         CamMove(); // 카메라 회전
         Zoom(); // 카메라 위치 조정
-
+        PlayerMove(); // 플레이어 이동
     }
 }
