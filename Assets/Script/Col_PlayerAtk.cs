@@ -9,7 +9,7 @@ public class Col_PlayerAtk : MonoBehaviour
     int comboStep;
     public string dmg;
     public TextMeshProUGUI dmgText;
-    // public HitStop hitStop;
+    public HitStop hitStop;
     private void OnEnable()
     {
         comboStep = combo.comboStep;
@@ -22,6 +22,7 @@ public class Col_PlayerAtk : MonoBehaviour
             dmg = string.Format("{0}+{1}", type_Atk, comboStep);
             dmgText.text = dmg;
             dmgText.gameObject.SetActive(true);
+            hitStop.StopTime();
         }
     }
 }

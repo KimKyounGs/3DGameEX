@@ -24,6 +24,11 @@ public class Combo : MonoBehaviour
     {
         if(!inputSmash)
         {
+            HitStop.Instance.stopTime = 0.1f;
+            HitStop.Instance.timeScaleRecoverySpeed = 5;
+            HitStop.Instance.shakeFrequency = 0.2f;
+            HitStop.Instance.shakeIntensity = 0.2f;
+            
             if(comboStep == 2)
             {
                 //기본공격격
@@ -37,6 +42,11 @@ public class Combo : MonoBehaviour
 
         if(inputSmash)
         {
+            HitStop.Instance.stopTime = 0.2f;
+            HitStop.Instance.timeScaleRecoverySpeed = 3;
+            HitStop.Instance.shakeFrequency = 1f;
+            HitStop.Instance.shakeIntensity = 1f;
+
             if(comboStep == 1)
             {
                 playerAnim.Play("ARPG_Samurai_Attack_Sprint");
@@ -84,11 +94,11 @@ public class Combo : MonoBehaviour
 
    void SmashAttack()
    {
-     if(comboPosible)
-     {
-        comboPosible = false; // 콤보 불가능
-        inputSmash = true; // 입력 스매시
-     }
+        if(comboPosible)
+        {
+            comboPosible = false; // 콤보 불가능
+            inputSmash = true; // 입력 스매시
+        }
    }
 
     void Update()
