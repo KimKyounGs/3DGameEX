@@ -39,15 +39,15 @@ public class Combo : MonoBehaviour
         {
             if(comboStep == 1)
             {
-                //playerAnim.Play();
+                playerAnim.Play("ARPG_Samurai_Attack_Sprint");
             }
              if(comboStep == 2)
             {
-                //playerAnim.Play();
+                playerAnim.Play("ARPG_Samurai_Attack_Heavy2");
             }
              if(comboStep == 3)
             {
-                //playerAnim.Play();
+                playerAnim.Play("ARPG_Samurai_Attack_Heavy1_Start");
             }
         }
 
@@ -84,11 +84,11 @@ public class Combo : MonoBehaviour
 
    void SmashAttack()
    {
-        if(comboPosible)
-        {
-            comboPosible = false; // 콤보 불가능
-            inputSmash = true; // 입력 스매시
-        }
+     if(comboPosible)
+     {
+        comboPosible = false; // 콤보 불가능
+        inputSmash = true; // 입력 스매시
+     }
    }
 
     void Update()
@@ -105,13 +105,12 @@ public class Combo : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.Space)) 
         {
-            //방어
+            playerAnim.Play("Parrying");
         }
     }
     
-   
 
-    void ChageTag(string t)
+    public void ChageTag(string t)
     {
         hitBox.tag = t; // 히트박스 태그 변경
     }
