@@ -31612,21 +31612,21 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0
-    functionName: ChageTag
+    functionName: ChangeTag
     data: Parrying
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.083333336
-    functionName: ChageTag
+  - time: 0.05
+    functionName: ChangeTag
     data: Defence
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 0.55
-    functionName: ChageTag
+    functionName: ChangeTag
     data: HitBox_Player
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

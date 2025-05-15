@@ -22444,7 +22444,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.5
+        time: 0.51666665
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -22456,7 +22456,8 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: root/pelvis/spine_01/spine_02/spine_03/clavicle_r/upperarm_r/lowerarm_r/hand_r/Katana_Generic02/Col_NormalAtk
+    path: root/pelvis/spine_01/spine_02/spine_03/clavicle_r/upperarm_r/lowerarm_r/hand_r/Katana_Generic02
+      Variant/Col_NormalAtk
     classID: 1
     script: {fileID: 0}
     flags: 0
@@ -22496,7 +22497,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 417880079
+      path: 1579720737
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
@@ -46096,7 +46097,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.5
+        time: 0.51666665
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -46108,7 +46109,8 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: root/pelvis/spine_01/spine_02/spine_03/clavicle_r/upperarm_r/lowerarm_r/hand_r/Katana_Generic02/Col_NormalAtk
+    path: root/pelvis/spine_01/spine_02/spine_03/clavicle_r/upperarm_r/lowerarm_r/hand_r/Katana_Generic02
+      Variant/Col_NormalAtk
     classID: 1
     script: {fileID: 0}
     flags: 0
@@ -46123,14 +46125,14 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.43333334
+  - time: 0.45
     functionName: NextAtk
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.81666666
+  - time: 0.8333333
     functionName: ResetCombo
     data: 
     objectReferenceParameter: {fileID: 0}

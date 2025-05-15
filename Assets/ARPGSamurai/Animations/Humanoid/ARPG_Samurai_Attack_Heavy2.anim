@@ -32056,7 +32056,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.38333333
+        time: 0.4
         value: 1
         inSlope: Infinity
         outSlope: Infinity
@@ -32065,7 +32065,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.5
+        time: 0.5833333
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -32077,7 +32077,8 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: root/pelvis/spine_01/spine_02/spine_03/clavicle_r/upperarm_r/lowerarm_r/hand_r/Katana_Generic02/Col_SmashAtk
+    path: root/pelvis/spine_01/spine_02/spine_03/clavicle_r/upperarm_r/lowerarm_r/hand_r/Katana_Generic02
+      Variant/Col_SmashAtk
     classID: 1
     script: {fileID: 0}
     flags: 0
@@ -32126,7 +32127,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     - serializedVersion: 2
-      path: 409088485
+      path: 2971952714
       attribute: 2086281974
       script: {fileID: 0}
       typeID: 1
@@ -65329,7 +65330,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.38333333
+        time: 0.4
         value: 1
         inSlope: Infinity
         outSlope: Infinity
@@ -65338,7 +65339,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.5
+        time: 0.5833333
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -65350,7 +65351,8 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_IsActive
-    path: root/pelvis/spine_01/spine_02/spine_03/clavicle_r/upperarm_r/lowerarm_r/hand_r/Katana_Generic02/Col_SmashAtk
+    path: root/pelvis/spine_01/spine_02/spine_03/clavicle_r/upperarm_r/lowerarm_r/hand_r/Katana_Generic02
+      Variant/Col_SmashAtk
     classID: 1
     script: {fileID: 0}
     flags: 0
@@ -65358,7 +65360,7 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 1.1
+  - time: 1.0833334
     functionName: ResetCombo
     data: 
     objectReferenceParameter: {fileID: 0}

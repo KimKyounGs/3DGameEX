@@ -1,3 +1,4 @@
+using UnityEditor.SpeedTree.Importer;
 using UnityEngine;
 
 public class Minotaurs : MonoBehaviour
@@ -8,36 +9,46 @@ public class Minotaurs : MonoBehaviour
     bool enableAct;
     int atkStep;
 
+
     void Start()
     {
         minoAnim = GetComponent<Animator>();
         enableAct = true;
     }
 
-    void RotateMino()
+
+    private void RotateMino()
     {
         Vector3 dir = target.position - transform.position;
+        dir.y = 0; // 수직 방향 제거 (y축 고정)
 
-        transform.localRotation = Quaternion.Slerp(transform.localRotation, Quaternion.LookRotation(dir), 5 * Time.deltaTime);
+        if (dir != Vector3.zero) // 방향 벡터가 0이 아닌 경우에만 회전
+        {
+            Quaternion targetRotation = Quaternion.LookRotation(dir);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, 5 * Time.deltaTime);
+        }
     }
 
     void MoveMino()
     {
-        if ((target.position - transform.position).magnitude >= 2)
+        if((target.position - transform.position).magnitude >= 3)
         {
             minoAnim.SetBool("Walk", true);
             transform.Translate(Vector3.forward * minoSpeed * Time.deltaTime, Space.Self);
         }
 
-        if ((target.position - transform.position).magnitude < 2)
+        if((target.position - transform.position).magnitude <3)
         {
             minoAnim.SetBool("Walk", false);
         }
+
     }
 
+        
     void Update()
     {
-        if (enableAct)
+        
+        if(enableAct)
         {
             RotateMino();
             MoveMino();
@@ -46,7 +57,7 @@ public class Minotaurs : MonoBehaviour
 
     void MinoAtk()
     {
-        if ((target.position - transform.position).magnitude < 10)
+        if((target.position - transform.position).magnitude < 10)
         {
             switch(atkStep)
             {
@@ -56,11 +67,11 @@ public class Minotaurs : MonoBehaviour
                     break;
                 case 1:
                     atkStep += 1;
-                    //minoAnim.Play("attack2");
+                    minoAnim.Play("attack2");
                     break;
                 case 2:
-                    atkStep = 0;
-                    //minoAnim.Play("attack3");
+                    atkStep =0;
+                    minoAnim.Play("attack3");
                     break;
             }
         }
@@ -71,8 +82,25 @@ public class Minotaurs : MonoBehaviour
         enableAct = false;
     }
 
+
     void UnFreezeMino()
     {
         enableAct = true;
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

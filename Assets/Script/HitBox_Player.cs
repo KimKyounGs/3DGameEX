@@ -15,7 +15,7 @@ public class HitBox_Player : MonoBehaviour
         {
             if(gameObject.CompareTag("HitBox_Player"))
             {
-                //ë°ë¯¸ì§€ì…ì€ ì• ë‹ˆë©”ì´ì…˜
+                //µ¥¹ÌÁöÀÔÀº ¾Ö´Ï¸ŞÀÌ¼Ç
 
                 message.text = "Player Damage";
                 message.gameObject.SetActive(true);
